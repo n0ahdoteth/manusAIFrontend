@@ -16,33 +16,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
 	return (
-		<Navbar bg='light' expand='lg'>
+        <>
+		<Navbar  expand='lg'>
 			<Container>
-				<Navbar.Brand href='#home'>React-Bootstrap</Navbar.Brand>
+				<Nav.Item href='#home'>
+					<Link to='/' className='link-title'>
+						<img src={logo} style={{ width: '65px' }} alt='' />
+					</Link>
+				</Nav.Item>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav'>
-					<Nav className='me-auto'>
-						<Nav.Link href='#home'>Home</Nav.Link>
-						<Nav.Link href='#link'>Link</Nav.Link>
-						<NavDropdown title='Dropdown' id='basic-nav-dropdown'>
-							<NavDropdown.Item href='#action/3.1'>
-								Action
-							</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.2'>
-								Another action
-							</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.3'>
-								Something
-							</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href='#action/3.4'>
-								Separated link
-							</NavDropdown.Item>
-						</NavDropdown>
+					<Nav className='m-auto' style={{ marginLeft: '-30px' }}>
+						<Nav.Link href='#home' className='link-styling'>
+							Translate
+						</Nav.Link>
+						<Nav.Link href='#link' className='link-styling'>
+							Learn
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
+                
 			</Container>
+           
+          
 		</Navbar>
+        <hr style={{marginTop:"-10px"}} />
+        </>
 	);
 };
 export default NavBar;

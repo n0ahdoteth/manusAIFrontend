@@ -13,30 +13,28 @@ import Homepage from './Homepage';
 import Translate from './Translate.jsx';
 import logo from './images/manusai-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import NavBar from './NavBar';
 
 function App() {
 	return (
 		<>
-			<main>
-				<Routes>
-					<Route exact path='/' element={<Homepage />} />
-					<Route exact path='/translate' element={<Translate />} />
-				</Routes>
-			</main>
-
 			<div className='App'>
-				
-				Welcome to Manus.ai
-				<Link to='/' className='link-title'>
-					<img src={logo} style={{ width: '65px' }} />
-				</Link>
-				<Link to='/translate' className='link-title'>
-					Translate
-				</Link>
+				<NavBar />
+
 				{/* <Link to='/strategies' className='link-styling'>
 							Group Strategy/Calendar
 				</Link> */}
+
+				<main>
+					<Routes>
+						<Route exact path='/' element={<Homepage />} />
+						<Route
+							exact
+							path='/translate'
+							element={<Translate />}
+						/>
+					</Routes>
+				</main>
 			</div>
 		</>
 	);
