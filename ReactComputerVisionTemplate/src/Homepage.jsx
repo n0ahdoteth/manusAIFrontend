@@ -1,8 +1,14 @@
 import React from 'react'
+import NavBar from './NavBar.jsx';
 
 const Homepage = () => {
 
-	return <div>Homepage</div>;
+	return <div>
+        
+    <NavBar />
+
+
+    </div>;
 
 
 };
