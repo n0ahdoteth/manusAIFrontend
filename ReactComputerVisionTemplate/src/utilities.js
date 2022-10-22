@@ -14,6 +14,7 @@ export const drawRect = (boxes, classes, scores, threshold, imgWidth, imgHeight,
             // Extract variables
             const [y,x,height,width] = boxes[i]
             const text = classes[i]
+            // console.log(text);
             
             // Set styling
             ctx.strokeStyle = labelMap[text]['color']
