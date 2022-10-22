@@ -90,7 +90,7 @@ const Translate = () => {
 		// e.g. const net = await cocossd.load();
 		// https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json
 		const net = await tf.loadGraphModel(
-			'https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json'
+			'https://www.jsonkeeper.com/b/0UES'
 		);
 
 		//  Loop and detect hands
@@ -124,7 +124,7 @@ const Translate = () => {
 			const resized = tf.image.resizeBilinear(img, [640, 480]);
 			const casted = resized.cast('int32');
 			const expanded = casted.expandDims(0);
-			const obj = await net.executeAsync(expanded);
+			const obj = await net.then(() => executeAsync(expanded));
 			//   console.log(obj)
 
 			const boxes = await obj[1].array();

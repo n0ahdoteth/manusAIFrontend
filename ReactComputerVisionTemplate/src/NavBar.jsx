@@ -27,9 +27,9 @@ const NavBar = () => {
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='m-auto' style={{ marginLeft: '-30px' }}>
-						<Nav.Link href='#home' className='link-styling'>
+						<Link to="/translate" className='link-styling'>
 							Translate
-						</Nav.Link>
+						</Link>
 						<Nav.Link href='#link' className='link-styling'>
 							Learn
 						</Nav.Link>
