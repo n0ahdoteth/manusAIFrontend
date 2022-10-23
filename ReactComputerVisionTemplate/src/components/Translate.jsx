@@ -139,7 +139,7 @@ const Translate = () => {
 			<div styles={{
                 margin: '20%',
             }}>
-				<p
+				<h2
 					styles={{
 						display: 'block',
 						padding: '20px',
@@ -148,7 +148,7 @@ const Translate = () => {
 					}}
 				>
 					{word}
-				</p>
+				</h2>
 			</div>
 
 			<header className='App-header'>
