@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
 import * as tf from '@tensorflow/tfjs';
 import Webcam from 'react-webcam';
-import './App.css';
+import '../App.css';
 
 const Translate = () => {
 	const webcamRef = useRef(null);
 	const canvasRef = useRef(null);
-	const [word, setWord] = useState('text');
+	const [word, setWord] = useState('Manus.ai');
 
 	const labelMap = {
 		1: { name: 'Hello', color: 'red' },
@@ -136,14 +136,20 @@ const Translate = () => {
 	}, []);
 	return (
 		<div className='App'>
-			<p
-				styles={{
-					display: 'block',
-					marginTop: '300px',
-				}}
-			>
-				{word}{' '}
-			</p>
+			<div styles={{
+                margin: '20%',
+            }}>
+				<p
+					styles={{
+						display: 'block',
+						padding: '20px',
+						fontSize: '24px',
+                        color:"red"
+					}}
+				>
+					{word}
+				</p>
+			</div>
 
 			<header className='App-header'>
 				<Webcam
