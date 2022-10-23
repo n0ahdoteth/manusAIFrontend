@@ -94,9 +94,9 @@ const Translate = () => {
 		);
 
 		//  Loop and detect hands
-		setInterval(() => {
-			detect(net);
-		}, 16.7);
+		// setInterval(() => {
+		// 	detect(net);
+		// }, 16.7);
 	};
 
 	const detect = async (net) => {
@@ -124,9 +124,9 @@ const Translate = () => {
 			const resized = tf.image.resizeBilinear(img, [640, 480]);
 			const casted = resized.cast('int32');
 			const expanded = casted.expandDims(0);
-			const obj = await net.then(() => executeAsync(expanded));
+			const obj = await net.executeAsync(expanded);
 			//   console.log(obj)
-
+            
 			const boxes = await obj[1].array();
 			const classes = await obj[2].array();
 			const scores = await obj[4].array();
@@ -158,7 +158,7 @@ const Translate = () => {
 
 	useEffect(() => {
 		runCoco();
-	}, [word]);
+	}, []);
 	return (
 		<div className='App'>
 			<p

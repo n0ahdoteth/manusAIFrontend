@@ -19,7 +19,7 @@ function App() {
 	return (
 		<>
 			<div className='App'>
-				<NavBar />
+				{/* <NavBar /> */}
 
 				{/* <Link to='/strategies' className='link-styling'>
 							Group Strategy/Calendar
@@ -27,7 +27,7 @@ function App() {
 
 				<main>
 					<Routes>
-						<Route exact path='/' element={<Homepage />} />
+						<Route exact path='/' element={<Homepage logo={logo}/>} />
 						<Route
 							exact
 							path='/translate'
