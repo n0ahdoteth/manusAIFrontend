@@ -19,11 +19,7 @@ function App() {
 	return (
 		<>
 			<div className='App'>
-				{/* <NavBar /> */}
-
-				{/* <Link to='/strategies' className='link-styling'>
-							Group Strategy/Calendar
-				</Link> */}
+                
 
 				<main>
 					<Routes>

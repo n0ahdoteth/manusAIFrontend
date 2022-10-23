@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar.jsx';
 import { Button } from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 
 const Homepage = ({ logo }) => {
 	return (
@@ -22,7 +23,9 @@ const Homepage = ({ logo }) => {
 
 			<div style={{marginTop:"40px"}}>
 				
-				<Button style={{width:"200px", height:"50px", fontSize:"20px" }}>Enter App</Button>
+                <Link to="/translate">
+				    <Button style={{width:"200px", height:"50px", fontSize:"20px" }}>Enter App</Button>
+                </Link>
 			</div>
 		</div>
 	);
